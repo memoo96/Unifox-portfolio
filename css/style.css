@@ -1,0 +1,506 @@
+/* General style  */
+
+body{
+    font-family: 'Lucida Sans';
+   
+}
+
+.sections{
+    padding: 20px 0;
+}
+
+.overlay{                                  /* Tricky.......... */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.section-header .section-title{
+    font-size: 40px;
+    color: mediumaquamarine;
+}
+
+.section-header .line{                     /* Tricky.......... */
+    width: 150px;
+    background: #ddd;
+    height: 2px;
+    margin: auto;
+}
+
+.section-header .line span{                               
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: mediumaquamarine;
+    margin: auto;
+    position: relative;
+    bottom: 2px;
+}
+
+
+.section-header p{
+    width: 50%;
+    color: #888;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+@media (max-width:575px){
+    .section-header p{
+        width: 80%;
+    }
+}
+
+
+
+
+/* Header */
+
+header{                                   /* Tricky.......... */
+    height: auto;
+    padding: 5px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 555;
+
+}
+
+.sticky{                                 /* Tricky.......... */
+    background-color: #000;
+    color: #fff;
+}
+
+header i.icon{                           /* Tricky.......... */
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    cursor: pointer;
+    z-index: 10;
+    display: none; 
+}
+
+header .logo h2{
+    font-size: 25px;
+    color: mediumaquamarine;
+}
+
+header nav .nav-list{
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;                      /* Tricky.......... */
+    justify-content: space-around;
+}
+
+header nav .nav-list .list a{
+    display: block;
+    padding: 15px 0;
+    margin: 9px 0;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+header nav .nav-list .list a:hover{
+    color: mediumaquamarine;
+}
+
+@media (max-width:575px){
+
+    header{
+        background-color: #000;
+    }
+
+    header .logo{
+        text-align: center;
+    }
+
+    header nav .nav-list{
+        display: none;
+        padding: 0;
+        text-align: center;
+    } 
+
+    header i.icon{
+        display: block;
+        color: #fff;
+    }
+}
+
+/* Home section */
+
+.home{
+    position: relative;
+    height: 600px;
+    background-image: url('../images/skill-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+.home .home-content{                     /* Tricky.......... */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.home .home-title{
+    color: white;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+.home .home-desc{
+    color: #ddd;
+    font-size: 16px;
+}
+
+.home .button{
+    color: white;
+    background-color: mediumaquamarine;
+    padding: 10px 0;
+    width: 150px;
+    text-align: center;
+}
+
+@media (max-width:575px){
+    .home .home-title{
+        font-size: 25px;
+    }
+
+    .home .button{
+        margin-bottom: 10px;
+    }
+}
+
+
+/* About */
+
+.about .about-info h3{
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.about .about-info h3 span{
+    color: mediumaquamarine;
+}
+
+.about .about-info .about-info-desc{
+    line-height: 1.8;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.about .about-info .about-info-btn{
+    background-color: mediumaquamarine;
+    padding: 10px 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about .about-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width:575px){
+    .about .about-info h3{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:576px) and (max-width:768px){
+    .about .about-info{
+        text-align: center;
+    }
+}
+
+
+/* Services */
+
+.services{
+    background-color: #f7f7f7;
+}
+
+.services .serv{
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.services .serv i{
+   
+    background-color: mediumaquamarine;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.services .serv-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: mediumaquamarine;
+    transition: all 0.3s ease-in-out;
+}
+
+.services .serv-desc{
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.services .serv:hover{
+    background-color: mediumaquamarine;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+.services .serv:hover i{
+    background-color: #fff;
+    color: mediumaquamarine;
+}
+
+.services .serv:hover .serv-title,
+.services .serv:hover .serv-desc{
+    color: #fff;
+}
+
+
+/* Stat */
+
+.stat{
+    background-image: url('../images/lap-stat.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 250px;
+}
+
+.stat .stat-info{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.stat .stat-info i,
+.stat .stat-info span{
+    display: block;
+    margin: auto;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.stat .stat-info i{
+    background-color: mediumaquamarine;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+}
+
+.stat .stat-info span.timer{
+    font-size: 20px;
+}
+
+.stat .stat-info .stat-info-title{
+    font-size: 20px;
+}
+
+@media (max-width:991px){
+    .stat{
+        height: 1000px;
+    }
+}
+
+
+/* Portfolio */
+
+.Portfolio .buttons{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Portfolio .buttons button{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    width: 100px;
+    outline: 0;  
+}
+
+.Portfolio .images > div{
+    margin-bottom: 20px;
+}
+
+.Portfolio .images > div img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.Portfolio .more{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    width: 250px;
+    display: block;
+    margin: auto;
+    outline: 0;          /* Tricky................ */
+}
+
+
+.active-btn{
+    background-color: mediumaquamarine !important;
+}
+
+
+/* Exprtes */           
+
+.exprte{                                    /* Tricky................ */ 
+    background-color: #4c4c4c;
+}
+
+.exprte  .section-title{
+    color: #fff;
+}
+
+.exprte .progress-content{
+    margin-top: 30px;
+}
+
+.exprte .progress{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    position: relative;
+}
+
+.exprte .progress > span{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.exprte .progress .progress-value{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    top: 5%;
+    left: 5%;
+    background: none;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 135px;
+}
+
+.exprte .progress .progress-left{
+    left: 0;
+}
+
+.exprte .progress .progress-right{
+    right: 0;
+}
+
+.exprte .progress .progress-bar{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border-width: 10px;
+    border-style: solid;
+}
+
+
+.exprte .progress.blue .progress-bar{
+    border-color: #049dff;
+}
+
+.exprte .progress.yellow .progress-bar{
+    border-color: #fdba04;
+}
+
+.exprte .progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    transform-origin: left;
+}
+
+.exprte .progress .progress-right .progress-bar{
+    right: 100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    transform-origin: right;
+    animation: load1 1.8s linear forwards;
+}
+
+.exprte .progress.blue .progress-left .progress-bar{
+    animation: load2 1.5s linear forwards 1.8s;
+}
+
+.exprte .progress.yellow .progress-left .progress-bar{
+    animation: load3 1s linear forwards 1.8s;
+}
+
+
+@keyframes load1{        /* Tricky................ */                
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes load2{                        
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(144deg);
+    }
+}
+
+@keyframes load3{                        
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+.exprte .title{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
